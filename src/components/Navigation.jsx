@@ -10,14 +10,19 @@ const Navigation = () => {
   return (
     <nav className="bg-blue-900 text-white shadow-lg" role="navigation" aria-label="Hovednavigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between h-16">          <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold">
-                <a href="#hjem" className="hover:text-blue-200 transition-colors duration-200">
-                  Djurhuus Data
-                </a>
-              </h1>
+              <a 
+                href="#hjem" 
+                className="hover:opacity-80 transition-opacity duration-200"
+                aria-label="Djurhuus Data - Gå til forsiden"
+              >
+                <img 
+                  src="/Logo Dark-trans.png" 
+                  alt="Djurhuus Data Logo" 
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
           </div>
 
