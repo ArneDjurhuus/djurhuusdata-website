@@ -25,11 +25,11 @@ const Footer = () => {
               <p>
                 <span className="font-medium">Telefon:</span>{' '}
                 <a
-                  href="tel:+4512345678"
+                  href="tel:+4521360035"
                   className="hover:text-blue-300 transition-colors duration-200"
                   aria-label="Ring til Arne Djurhuus"
                 >
-                  +45 12 34 56 78
+                  +45 21 36 00 35
                 </a>
               </p>
             </div>
@@ -49,21 +49,20 @@ const Footer = () => {
 
           {/* Om virksomheden */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Djurhuus Data</h3>
+            <h3 className="text-lg font-semibold mb-4">DjurhuusData</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Professionelle IT-løsninger med fokus på kvalitet og kundetilfredshed. 
-              Vi leverer skræddersyede løsninger, der passer til dine behov.
+              Datamatiker studerende under udvikling.
             </p>
             <div className="mt-4">
-              <p className="text-sm text-gray-400">CVR: 12345678</p>
-              <p className="text-sm text-gray-400">Aalborg, Danmark</p>
+              <p className="text-sm text-gray-400">CVR: 45545075</p>
+              <p className="text-sm text-gray-400">København, Danmark</p>
             </div>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} Djurhuus Data. Alle rettigheder forbeholdes.
+            &copy; {currentYear} DjurhuusData. Alle rettigheder forbeholdes.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <a
