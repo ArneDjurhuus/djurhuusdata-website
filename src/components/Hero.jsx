@@ -9,11 +9,10 @@ const Hero = () => {
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Velkommen til{' '}
-            <span className="text-blue-300">Djurhuus Data</span>
+            <span className="text-blue-300">DjurhuusData</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Professionelle IT-løsninger skræddersyet til dine behov. 
-            Fra webudvikling til komplekse softwareløsninger.
+            Professionelle IT-løsninger skræddersyet til dine behov. <br />Dette er en portefølje af mine projekter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

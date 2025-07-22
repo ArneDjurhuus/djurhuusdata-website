@@ -1,26 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [showTopBtn, setShowTopBtn] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowTopBtn(true)
+      } else {
+        setShowTopBtn(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <nav className="bg-blue-900 text-white shadow-lg" role="navigation" aria-label="Hovednavigation">
+    <>
+      <nav className="bg-blue-900 text-white shadow-lg" role="navigation" aria-label="Hovednavigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">          <div className="flex items-center">
+        <div className="flex justify-between h-24">          <div className="flex items-center">
             <div className="flex-shrink-0">
               <a 
                 href="#hjem" 
                 className="hover:opacity-80 transition-opacity duration-200"
-                aria-label="Djurhuus Data - Gå til forsiden"
+                aria-label="DjurhuusData - Gå til forsiden"
               >
                 <img 
                   src="/Logo Dark-trans.png" 
-                  alt="Djurhuus Data Logo" 
-                  className="h-10 w-auto"
+                  alt="DjurhuusData Logo" 
+                  className="h-12 w-auto"
                 />
               </a>
             </div>
@@ -110,6 +128,19 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+
+      {/* Back to top button */}
+      <button
+        onClick={scrollToTop}
+        className={`fixed bottom-8 right-8 z-50 bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-opacity duration-500 ${showTopBtn ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+        aria-label="Tilbage til toppen"
+        style={{transitionProperty: 'opacity'}}
+      >
+        <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </>
   )
 }
 

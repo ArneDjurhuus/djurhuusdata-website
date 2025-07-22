@@ -12,7 +12,7 @@ const AboutMe = () => {
             Om mig
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Passioneret udvikler med mange års erfaring inden for IT-branchen
+            Udvikler og undersøger IT-banchen, dette er min portefølje af projekter.
           </p>
         </div>
 
@@ -34,9 +34,8 @@ const AboutMe = () => {
                 Min baggrund
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Jeg er en erfaren IT-konsulent og udvikler med over 10 års erfaring 
-                inden for softwareudvikling og systemdesign. Min passion ligger i at 
-                skabe innovative løsninger, der gør en reel forskel for mine kunder.
+                Jeg er en passioneret udvikler med interesse for at skabe innovative løsninger.
+                Jeg er igen med at oparbejde at udvikle mine færdigheder inden for softwareudvikling.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Gennem årene har jeg arbejdet med en bred vifte af teknologier og 

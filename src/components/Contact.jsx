@@ -85,7 +85,7 @@ const Contact = () => {
                     className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
                     aria-label="Ring til Arne Djurhuus"
                   >
-                    +45 12 34 56 78
+                    +45 21 36 00 35
                   </a>
                 </div>
               </div>
@@ -99,7 +99,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <p className="text-gray-900 font-medium">Lokation</p>
-                  <p className="text-gray-600">Aalborg, Danmark</p>
+                  <p className="text-gray-600">København, Danmark</p>
                 </div>
               </div>
             </div>
