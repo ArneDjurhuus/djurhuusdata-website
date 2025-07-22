@@ -94,7 +94,7 @@ const Contact = () => {
 
           {/* Kontaktformular */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form action="https://formspree.io/f/xwkzqgqg" method="POST" className="space-y-6">
+            <form action="https://formspree.io/f/mldljgjz" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Navn *
