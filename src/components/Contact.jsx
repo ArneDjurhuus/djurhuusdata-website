@@ -1,27 +1,4 @@
-import { useState } from 'react'
-
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // TODO: Implement form submission logic
-    console.log('Form submitted:', formData)
-    alert('Tak for din besked! Jeg vender tilbage til dig hurtigst muligt.')
-  }
-
   return (
     <section 
       id="kontakt" 
@@ -117,7 +94,7 @@ const Contact = () => {
 
           {/* Kontaktformular */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://formspree.io/f/xwkzqgqg" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Navn *
@@ -127,8 +104,6 @@ const Contact = () => {
                   id="name"
                   name="name"
                   required
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                   aria-describedby="name-help"
                 />
@@ -146,8 +121,6 @@ const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                   aria-describedby="email-help"
                 />
@@ -165,8 +138,6 @@ const Contact = () => {
                   id="subject"
                   name="subject"
                   required
-                  value={formData.subject}
-                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                   aria-describedby="subject-help"
                 />
@@ -184,8 +155,6 @@ const Contact = () => {
                   name="message"
                   required
                   rows="6"
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
                   aria-describedby="message-help"
                 ></textarea>

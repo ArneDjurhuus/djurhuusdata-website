@@ -29,7 +29,7 @@ const Navigation = () => {
       <nav className="bg-blue-900 text-white shadow-lg" role="navigation" aria-label="Hovednavigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">          <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 -ml-4 md:-ml-8">
               <a 
                 href="#hjem" 
                 className="hover:opacity-80 transition-opacity duration-200"
@@ -38,7 +38,7 @@ const Navigation = () => {
                 <img 
                   src="/Logo Dark-trans.png" 
                   alt="DjurhuusData Logo" 
-                  className="h-12 w-auto"
+                  className="max-h-16 w-auto" 
                 />
               </a>
             </div>
@@ -48,21 +48,21 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="#om-mig"
-              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
               aria-label="Gå til Om mig sektion"
             >
               Om mig
             </a>
             <a
               href="#projekter"
-              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
               aria-label="Gå til Projekter sektion"
             >
               Projekter
             </a>
             <a
               href="#kontakt"
-              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
               aria-label="Gå til Kontakt sektion"
             >
               Kontakt
