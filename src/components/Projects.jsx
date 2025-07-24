@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Projects = () => {
   const projects = [
     {
@@ -108,13 +110,13 @@ const Projects = () => {
           <p className="text-gray-600 mb-6">
             Interesseret i at se flere projekter eller diskutere et samarbejde?
           </p>
-          <a
-            href="#kontakt"
+          <Link
+            to="/kontakt"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-label="Kontakt mig for at diskutere projekter"
           >
             Kontakt mig
-          </a>
+          </Link>
         </div>
       </div>
     </section>

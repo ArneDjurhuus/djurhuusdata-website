@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [showTopBtn, setShowTopBtn] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,14 +26,19 @@ const Navigation = () => {
     setIsOpen(!isOpen)
   }
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false)
+  }, [location])
+
   return (
     <>
       <nav className="bg-blue-900 text-white shadow-lg" role="navigation" aria-label="Hovednavigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24">          <div className="flex items-center">
             <div className="flex-shrink-0 -ml-4 md:-ml-8">
-              <a 
-                href="#hjem" 
+              <Link 
+                to="/" 
                 className="hover:opacity-80 transition-opacity duration-200"
                 aria-label="DjurhuusData - Gå til forsiden"
               >
@@ -40,33 +47,33 @@ const Navigation = () => {
                   alt="DjurhuusData Logo" 
                   className="max-h-16 w-auto" 
                 />
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="#om-mig"
+            <Link
+              to="/om-mig"
               className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
               aria-label="Gå til Om mig sektion"
             >
               Om mig
-            </a>
-            <a
-              href="#projekter"
+            </Link>
+            <Link
+              to="/produkter"
               className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
-              aria-label="Gå til Projekter sektion"
+              aria-label="Gå til Produkter sektion"
             >
-              Projekter
-            </a>
-            <a
-              href="#kontakt"
+              Produkter
+            </Link>
+            <Link
+              to="/kontakt"
               className="hover:text-blue-200 px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors duration-200"
               aria-label="Gå til Kontakt sektion"
             >
               Kontakt
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -101,30 +108,27 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800">
-          <a
-            href="#om-mig"
+          <Link
+            to="/om-mig"
             className="hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
             aria-label="Gå til Om mig sektion"
           >
             Om mig
-          </a>
-          <a
-            href="#projekter"
+          </Link>
+          <Link
+            to="/produkter"
             className="hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
-            aria-label="Gå til Projekter sektion"
+            aria-label="Gå til Produkter sektion"
           >
-            Projekter
-          </a>
-          <a
-            href="#kontakt"
+            Produkter
+          </Link>
+          <Link
+            to="/kontakt"
             className="hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
-            onClick={() => setIsOpen(false)}
             aria-label="Gå til Kontakt sektion"
           >
             Kontakt
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

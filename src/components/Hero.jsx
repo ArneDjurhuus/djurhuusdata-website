@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
   return (
     <section 
@@ -15,20 +17,20 @@ const Hero = () => {
             Professionelle IT-løsninger skræddersyet til dine behov. <br />Dette er en portefølje af mine projekter.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#projekter"
+            <Link
+              to="/produkter"
               className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              aria-label="Se mine projekter"
+              aria-label="Se mine produkter"
             >
-              Se projekter
-            </a>
-            <a
-              href="#kontakt"
+              Se produkter
+            </Link>
+            <Link
+              to="/kontakt"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white"
               aria-label="Kontakt mig for at diskutere dit projekt"
             >
               Kontakt mig
-            </a>
+            </Link>
           </div>
         </div>
       </div>
