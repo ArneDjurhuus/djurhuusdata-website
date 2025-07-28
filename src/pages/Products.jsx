@@ -1,143 +1,7 @@
 import { Link } from 'react-router-dom'
+import { physicalProducts, softwareProducts } from '../data/products'
 
 const Products = () => {
-  const physicalProducts = [
-     {
-      id: 1,
-      name: "DD-PrivacyPEN",
-      category: "Hardware",
-      type: "physical",
-      price: "Fra 149,45 kr",
-      description: "USB med integreret TailsOS, din linux-baseret PC i baglommen.",
-      features: [
-        "Forhåndsinstalleret med TailsOS – The Amnesic Incognito Live System",
-        "Efterlader ingen spor på værtsmaskinen",
-        "Privacy first: Designet til anonymitet og sikkerhed",
-        "Kør sikkert internet uden at efterlade spor",
-        "Live-operativsystem – start direkte fra USB",
-        "Beskyt dig mod overvågning og censur"
-      ],
-      technologies: ["Tails", "Encryption", "Debian Linux", "Tor-netværket"],
-      deliveryTime: "2-3 hverdage",
-      image: "server"
-    }
-//    {
-//      id: 2,
-//      name: "Hjemmeside Hosting Server",
-//      category: "Hardware",
-//      type: "physical",
-//      price: "Fra 3.500 kr",
-//      description: "Dedikeret server til hosting af hjemmesider med fuld administration og support. Perfekt til små og mellemstore virksomheder.",
-//      features: [
-//        "24/7 overvågning og support",
-//        "Automatisk backup dagligt",
-//        "SSL-certifikater inkluderet",
-//        "99.9% uptime garanti",
-//        "Fuld root adgang",
-//        "Månedlig rapportering"
-//      ],
-//      technologies: ["Linux", "Apache/Nginx", "MySQL", "PHP"],
-//      deliveryTime: "1-2 uger",
-//      image: "server"
-//    },
-//    {
-//      id: 3,
-//      name: "Netværk Setup Pakke",
-//      category: "Networking",
-//      type: "physical",
-//      price: "Fra 8.000 kr",
-//      description: "Komplet netværksopsætning for små virksomheder inklusiv router, switch, firewall og WiFi access points.",
-//      features: [
-//        "Professionel router og firewall",
-//        "Managed switch med VLAN support",
-//        "Enterprise WiFi access points",
-//        "Kabelføring og installation",
-//        "Netværk dokumentation",
-//        "3 måneders support inkluderet"
-//      ],
-//      technologies: ["Cisco", "Ubiquiti", "Cat6 Kabler", "PoE"],
-//      deliveryTime: "2-3 uger",
-//      image: "network"
-//    }
-  ]
-
-  const softwareProducts = [
-    {
-      id: 1,
-      name: "Webshop Løsning",
-      category: "E-commerce",
-      type: "software",
-      price: "Fra 15.000 kr",
-      description: "Komplet e-commerce platform med produktstyring, betalingsintegration og kundeservice. Inkluderer responsive design, SEO-optimering og analytics.",
-      features: [
-        "Responsive design til alle enheder",
-        "Integreret betalingsløsning (Quickpay/Stripe)",
-        "Produktkatalog med kategorier",
-        "Ordrestyring og kundeservice",
-        "SEO-optimering og analytics",
-        "Admin panel til produktstyring"
-      ],
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-      deliveryTime: "4-6 uger",
-      image: "webshop"
-    },
-//    {
-//      id: 2,
-//      name: "CRM System",
-//      category: "Business Solutions",
-//      price: "Fra 25.000 kr",
-//      description: "Skræddersyet Customer Relationship Management system til styring af kunder, salg og markedsføring. Perfekt til små og mellemstore virksomheder.",
-//      features: [
-//        "Kundestyring og kontaktdatabase",
-//        "Salgspipeline og forecasting",
-//        "Email marketing integration",
-//        "Rapporter og analytics",
-//        "Opgavestyring og kalender",
-//        "Multi-user support med roller"
-//      ],
-//      technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-//      deliveryTime: "6-8 uger",
-//      image: "crm"
-//    },
-    {
-      id: 3,
-      name: "Portfolio Website",
-      category: "Web Development",
-      type: "software",
-      price: "Fra 8.000 kr",
-      description: "Professionel portfolio eller virksomhedshjemmeside med moderne design, optimeret for søgemaskiner og alle enheder.",
-      features: [
-        "Responsive og mobilvenligt design",
-        "SEO-optimering for Google",
-        "Kontaktformular med integration",
-        "CMS til indholdstyring",
-        "Performance optimering",
-        "SSL-certifikat og sikkerhed"
-      ],
-      technologies: ["React", "Tailwind CSS", "Headless CMS"],
-      deliveryTime: "2-3 uger",
-      image: "portfolio"
-    },
-    {
-      id: 5,
-      name: "API Integration",
-      category: "Backend Services",
-      type: "software",
-      price: "Fra 10.000 kr",
-      description: "Professionel API udvikling og integration til forbindelse af forskellige systemer og services. Sikker og skalerbar løsning.",
-      features: [
-        "RESTful API udvikling",
-        "Database design og optimering",
-        "Sikkerhed og authentication",
-        "Dokumentation og testing",
-        "Rate limiting og caching",
-        "Monitoring og logging"
-      ],
-      technologies: ["Node.js", "Express", "MongoDB", "JWT"],
-      deliveryTime: "3-5 uger",
-      image: "api"
-    }
-  ]
 
   // Helper function to render product cards
   const renderProductCard = (product) => (
@@ -153,7 +17,7 @@ const Products = () => {
       }`}>
         {product.name === "DD-PrivacyPEN" ? (
           <img 
-            src="/tailsOS-usb.jpg" 
+            src="/products/tailsOS-usb/tailsOS-usb.jpg" 
             alt="DD-PrivacyPEN USB med TailsOS"
             className="w-full h-full object-cover"
           />
@@ -236,16 +100,17 @@ const Products = () => {
         </div>
         
         {/* CTA Button */}
-        <button 
-          className={`w-full font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 ${
+        <Link
+          to={`/produkt/${product.slug}`}
+          className={`w-full block text-center font-medium py-2 px-4 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 ${
             product.type === 'physical'
               ? 'bg-green-600 hover:bg-green-700 text-white focus:ring-green-500'
               : 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500'
           }`}
-          aria-label={`Få tilbud på ${product.name}`}
+          aria-label={`Se detaljer for ${product.name}`}
         >
-          Få tilbud
-        </button>
+          Se detaljer
+        </Link>
       </div>
     </article>
   )

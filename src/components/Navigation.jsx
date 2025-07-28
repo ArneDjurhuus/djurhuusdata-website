@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import CartIcon from './CartIcon'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -74,10 +75,14 @@ const Navigation = () => {
             >
               Kontakt
             </Link>
+            <div className="ml-4">
+              <CartIcon />
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button and cart icon */}
+          <div className="md:hidden flex items-center space-x-2">
+            <CartIcon />
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md hover:text-blue-200 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-200"
