@@ -17,48 +17,30 @@ export const physicalProducts = [
     ],
     technologies: ["Tails", "Encryption", "Debian Linux", "Tor-netværket"],
     deliveryTime: "2-3 hverdage",
-    image: "server"
-  },
-//  {
-//    id: 2,
-//    slug: "hosting-server",
-//    name: "Hjemmeside Hosting Server",
-//    category: "Hardware",
-//    type: "physical",
-//    price: "Fra 3.500 kr",
-//    description: "Dedikeret server til hosting af hjemmesider med fuld administration og support. Perfekt til små og mellemstore virksomheder.",
-//    features: [
-//      "24/7 overvågning og support",
-//      "Automatisk backup dagligt",
-//      "SSL-certifikater inkluderet",
-//      "99.9% uptime garanti",
-//      "Fuld root adgang",
-//      "Månedlig rapportering"
-//    ],
-//    technologies: ["Linux", "Apache/Nginx", "MySQL", "PHP"],
-//    deliveryTime: "1-2 uger",
-//    image: "server"
-//  },
-//  {
-//    id: 3,
-//    slug: "network-setup",
-//    name: "Netværk Setup Pakke",
-//    category: "Networking",
-//    type: "physical",
-//    price: "Fra 8.000 kr",
-//    description: "Komplet netværksopsætning for små virksomheder inklusiv router, switch, firewall og WiFi access points.",
-//    features: [
-//      "Professionel router og firewall",
-//      "Managed switch med VLAN support",
-//      "Enterprise WiFi access points",
-//      "Kabelføring og installation",
-//      "Netværk dokumentation",
-//      "3 måneders support inkluderet"
-//    ],
-//    technologies: ["Cisco", "Ubiquiti", "Cat6 Kabler", "PoE"],
-//    deliveryTime: "2-3 uger",
-//    image: "network"
-//  }
+    image: "server",
+    images: [
+      {
+        src: "/products/tailsOS-usb/tailsOS-usb.jpg",
+        alt: "DD-PrivacyPEN USB med TailsOS - Hovedbillede",
+        isPrimary: true
+      },
+      {
+        src: "/products/tailsOS-usb/tailsOS-usb-packaging.jpg",
+        alt: "DD-PrivacyPEN emballage og indhold",
+        isPrimary: false
+      },
+      {
+        src: "/products/tailsOS-usb/tailsOS-usb-details.jpg",
+        alt: "DD-PrivacyPEN detaljer og specifikationer",
+        isPrimary: false
+      },
+      {
+        src: "/products/tailsOS-usb/tailsOS-interface.jpg",
+        alt: "TailsOS interface og desktop",
+        isPrimary: false
+      }
+    ]
+  }
 ]
 
 export const softwareProducts = [

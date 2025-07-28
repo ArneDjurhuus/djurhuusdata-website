@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
 import { useCart } from '../hooks/useCart'
+import ProductImageGallery from './ProductImageGallery'
 
 const ProductDetail = ({ product }) => {
   const { addToCart, isInCart, getCartItem } = useCart()
@@ -59,34 +60,7 @@ const ProductDetail = ({ product }) => {
             
             {/* Product Image */}
             <div className="lg:sticky lg:top-8">
-              <div className={`rounded-lg overflow-hidden shadow-lg ${
-                product.type === 'physical' 
-                  ? 'bg-gradient-to-br from-green-100 to-green-200' 
-                  : 'bg-gradient-to-br from-blue-100 to-blue-200'
-              }`}>
-                {product.name === "DD-PrivacyPEN" ? (
-                  <img 
-                    src="/tailsOS-usb.jpg" 
-                    alt={`${product.name} produkt billede`}
-                    className="w-full h-96 object-cover"
-                  />
-                ) : (
-                  <div className={`h-96 flex items-center justify-center ${
-                    product.type === 'physical' ? 'text-green-700' : 'text-blue-700'
-                  }`}>
-                    <div className="text-center">
-                      <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
-                        {product.type === 'physical' ? (
-                          <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732L14.146 12.8l-1.179 4.456a1 1 0 01-1.934 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732L9.854 7.2l1.179-4.456A1 1 0 0112 2z" clipRule="evenodd" />
-                        ) : (
-                          <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1v-2z" clipRule="evenodd" />
-                        )}
-                      </svg>
-                      <p className="text-lg font-medium">{product.name}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
+              <ProductImageGallery product={product} />
             </div>
 
             {/* Product Information */}
