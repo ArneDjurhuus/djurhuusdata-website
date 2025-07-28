@@ -12,7 +12,7 @@ const AboutMe = () => {
             Om mig
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Udvikler og undersøger IT-banchen, dette er min portefølje af projekter.
+            Undersøger IT-branchen, dette er min portefølje af projekter.
           </p>
         </div>
 
@@ -35,10 +35,10 @@ const AboutMe = () => {
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Jeg er en passioneret udvikler med interesse for at skabe innovative løsninger.
-                Jeg er igen med at oparbejde at udvikle mine færdigheder inden for softwareudvikling.
+                Jeg er igang med at oparbejde og udvikle mine færdigheder inden for softwareudvikling.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Gennem årene har jeg arbejdet med en bred vifte af teknologier og 
+                Jeg har arbejdet med en række af forskellige teknologier og 
                 brancher, hvilket har givet mig en unik forståelse af, hvordan 
                 teknologi kan optimere forretningsprocesser.
               </p>
@@ -62,15 +62,12 @@ const AboutMe = () => {
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>Node.js & Python</li>
                     <li>Databaser (SQL/NoSQL)</li>
-                    <li>API udvikling</li>
                   </ul>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <h4 className="font-semibold text-gray-900 mb-2">Tools</h4>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>Git & Version Control</li>
-                    <li>Docker & DevOps</li>
-                    <li>Testing & QA</li>
                   </ul>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -78,7 +75,6 @@ const AboutMe = () => {
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>Systemintegration</li>
                     <li>Performance optimering</li>
-                    <li>Sikkerhed & compliance</li>
                   </ul>
                 </div>
               </div>
