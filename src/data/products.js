@@ -25,18 +25,13 @@ export const physicalProducts = [
         isPrimary: true
       },
       {
-        src: "/products/tailsOS-usb/tailsOS-usb-packaging.jpg",
-        alt: "DD-PrivacyPEN emballage og indhold",
+        src: "/products/tailsOS-usb/tailsOS-usb-aluminium.jpg",
+        alt: "DD-PrivacyPEN aluminium USB",
         isPrimary: false
       },
       {
-        src: "/products/tailsOS-usb/tailsOS-usb-details.jpg",
-        alt: "DD-PrivacyPEN detaljer og specifikationer",
-        isPrimary: false
-      },
-      {
-        src: "/products/tailsOS-usb/tailsOS-interface.jpg",
-        alt: "TailsOS interface og desktop",
+        src: "/products/tailsOS-usb/tailsOS-usb-black.jpg",
+        alt: "DD-PrivacyPEN sort USB",
         isPrimary: false
       }
     ]
@@ -64,28 +59,8 @@ export const softwareProducts = [
     deliveryTime: "4-6 uger",
     image: "webshop"
   },
-//  {
-//    id: 2,
-//    slug: "crm-system",
-//    name: "CRM System",
-//    category: "Business Solutions",
-//    type: "software",
-//    price: "Fra 25.000 kr",
-//    description: "Skræddersyet Customer Relationship Management system til styring af kunder, salg og markedsføring. Perfekt til små og mellemstore virksomheder.",
-//    features: [
-//      "Kundestyring og kontaktdatabase",
-//      "Salgspipeline og forecasting",
-//      "Email marketing integration",
-//      "Rapporter og analytics",
-//      "Opgavestyring og kalender",
-//      "Multi-user support med roller"
-//    ],
-//    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-//    deliveryTime: "6-8 uger",
-//    image: "crm"
-//  },
   {
-    id: 3,
+    id: 2,
     slug: "portfolio-website",
     name: "Portfolio Website",
     category: "Web Development",
@@ -104,28 +79,8 @@ export const softwareProducts = [
     deliveryTime: "2-3 uger",
     image: "portfolio"
   },
-//  {
-//    id: 4,
-//    slug: "data-dashboard",
-//    name: "Data Analytics Dashboard",
-//    category: "Analytics",
-//    type: "software",
-//    price: "Fra 20.000 kr",
-//    description: "Interaktivt dashboard til visualisering af forretningsdata med real-time opdateringer og avancerede analyseværktøjer.",
-//    features: [
-//      "Real-time data visualization",
-//      "Customizable charts og graphs",
-//      "Data export funktionalitet",
-//      "Brugerrettigheder og adgangskontrol",
-//      "Mobile-responsive interface",
-//      "Integration med eksisterende systemer"
-//    ],
-//    technologies: ["React", "D3.js", "Python", "FastAPI"],
-//    deliveryTime: "5-7 uger",
-//    image: "dashboard"
-//  },
   {
-    id: 5,
+    id: 3,
     slug: "api-integration",
     name: "API Integration",
     category: "Backend Services",
@@ -144,26 +99,6 @@ export const softwareProducts = [
     deliveryTime: "3-5 uger",
     image: "api"
   },
-//  {
-//    id: 6,
-//    slug: "mobile-app",
-//    name: "Mobile App",
-//    category: "Mobile Development",
-//    type: "software",
-//    price: "Fra 30.000 kr",
-//    description: "Cross-platform mobilapplikation til iOS og Android. Fra idé til færdig app i App Store og Google Play.",
-//    features: [
-//      "Cross-platform udvikling",
-//      "Native performance og feel",
-//      "Push notifications",
-//      "Offline funktionalitet",
-//      "App Store deployment",
-//      "Brugeranalytics og crash reporting"
-//    ],
-//    technologies: ["React Native", "Expo", "Firebase"],
-//    deliveryTime: "8-12 uger",
-//    image: "mobile"
-//  }
 ]
 
 export const getAllProducts = () => {
